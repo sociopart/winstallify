@@ -1,3 +1,2 @@
-release/
-debug/
+bin/
 premake5.exe

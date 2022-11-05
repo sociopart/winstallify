@@ -47,6 +47,10 @@ INCLUDE_DIRS = {
   ROOT_PATH "/include/argtable/"
 }
 
+EXCLUDES = {
+  ROOT_PATH "/include/sqlite/shell.c"
+}
+
 -- Directories with .LIB files (to link with current project) --
 LIB_DIRS = {}
 
@@ -96,10 +100,11 @@ platforms { "x86_64", "x86" }
       location (PROJ_DIR)
   characterset (CHARACTER_SET)
   files{FILE_DIRS}
-  targetdir "release/bin/%{cfg.buildcfg}"
-      objdir "release/obj/%{cfg.buildcfg}"
+  targetdir "bin/%{cfg.buildcfg}"
+      objdir "bin/obj/%{cfg.buildcfg}"
       links{LINKED_LIBS}
       includedirs{INCLUDE_DIRS}
+      excludes{EXCLUDES}
       libdirs{LIB_DIRS}
   usingdirs{USING_DIRS}
   
