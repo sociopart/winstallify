@@ -1,7 +1,7 @@
 #include "install.h"
 
 int cli_cmd_install(int cm_argc, char** cm_argv) {
-	printf("MAIN PAGE: install\n");
+    printf("MAIN PAGE: install\n");
     installCLIData install_data;
     void* argtable[][2] =
     {
